@@ -1,0 +1,30 @@
+name: Radar semanal
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 20 * * 1'
+permissions:
+  contents: write
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python scanner.py
+      - name: Alertas solo al nuevo cruce
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python notify.py
+      - name: Actualizar resultados
+        run: |
+          git config user.name 'Davizz-dev13'
+          git config user.email 'davidgallardomoreno7@gmail.com'
+          git add docs/scan.json alert_state.json
+          git diff --cached --quiet || git commit -m "Actualizar radar $(date -u +%F)"
+          git push
