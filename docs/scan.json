@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-29T20:37:47.185100+00:00",
+  "generated_at_utc": "2026-09-29T20:48:39.794506+00:00",
   "limits": "Curated NON-EXHAUSTIVE universe; dates/financials manually transcribed from primary releases, not auto-discovered. Market Yahoo snapshots can stale. Score is evidence checklist, not chance of x5. No trading signal. Reconfirm current filings and catalyst before action.",
   "results": [
     {
@@ -7,7 +7,7 @@
       "sector": "energía / pilas de óxido sólido",
       "market": "London Stock Exchange Reino Unido",
       "as_of": "2026-09-29",
-      "cap_usd_m": 1111.8,
+      "cap_usd_m": 1111.9,
       "market_cap_local_m": 840.3,
       "price": 393.0,
       "price_currency_unit": "GBp",
