@@ -33,7 +33,7 @@
       "quality_note": "Licencias con socios industriales y contrato de suministro Doosan/Reverion; adopción a escala pendiente.",
       "expansion_note": "Tecnología SOFC/SOEC licenciada a varios fabricantes y mercados; economía de regalías por verificar.",
       "volume_ratio_20_vs_previous40": 0.92,
-      "return_60sessions_pct": NaN,
+      "return_60sessions_pct": null,
       "last_complete_session": "2026-10-05",
       "flags": {
         "catalyst_future_verified_window": true,
@@ -78,7 +78,7 @@
       "quality_note": "Diversas lecturas clínicas; resultado de fase III no está validado.",
       "expansion_note": "C1q y C1 en neuroinflamación; cartera en fases distintas, no comercial.",
       "volume_ratio_20_vs_previous40": 1.29,
-      "return_60sessions_pct": NaN,
+      "return_60sessions_pct": null,
       "last_complete_session": "2026-10-05",
       "flags": {
         "catalyst_future_verified_window": true,
@@ -123,7 +123,7 @@
       "quality_note": "Fase III DMD previa cumplió objetivo; wet AMD pivotal pendiente. Q2 ingreso incluye hito no recurrente de $100M.",
       "expansion_note": "Vector AAV plataforma con varios programas; desarrollo clínico y regalías por separado.",
       "volume_ratio_20_vs_previous40": 0.99,
-      "return_60sessions_pct": NaN,
+      "return_60sessions_pct": null,
       "last_complete_session": "2026-10-05",
       "flags": {
         "catalyst_future_verified_window": true,
@@ -168,7 +168,7 @@
       "quality_note": "Phase III last patient visit completed; binary clinical trial, no drug sales. Funding terms need legal review.",
       "expansion_note": "pan-PPAR therapy opportunity in MASH; multiple indications not validated.",
       "volume_ratio_20_vs_previous40": 3.27,
-      "return_60sessions_pct": NaN,
+      "return_60sessions_pct": null,
       "last_complete_session": "2026-10-05",
       "flags": {
         "catalyst_future_verified_window": true,
@@ -213,7 +213,7 @@
       "quality_note": "379 design wins pero solo 175 en producción a Q2; pedido agosto para 2029, no catalizador inmediato. Precio >20 en SEK no es penny stock.",
       "expansion_note": "DMS/OMS reutilizable en múltiples modelos/OEM; futuros contratos no igualan ingresos actuales.",
       "volume_ratio_20_vs_previous40": 0.44,
-      "return_60sessions_pct": NaN,
+      "return_60sessions_pct": null,
       "last_complete_session": "2026-10-05",
       "flags": {
         "catalyst_future_verified_window": true,
