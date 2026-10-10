@@ -58,7 +58,7 @@ def check(row):
       'dilution_status':row.get('dilution_status'),'dilution_note':row.get('dilution_note'),
       'quality_status':row.get('quality_status'),'quality_note':row.get('quality_note'),
       'expansion_note':row.get('expansion_note'),
-      'volume_ratio_20_vs_previous40':round(vol,2),'return_60sessions_pct':round(change*100,1),
+      'volume_ratio_20_vs_previous40':round(vol,2),'return_60sessions_pct':round(change*100,1) if change==change else None,
       'last_complete_session':str(h.index[-1].date()), 'flags':flags,
       'review_required':not all(flags.values()),'score':sum(flags.values())}
 
@@ -71,7 +71,7 @@ def main():
     out={'generated_at_utc':datetime.now(timezone.utc).isoformat(),
       'limits':'Curated NON-EXHAUSTIVE universe; dates/financials manually transcribed from primary releases, not auto-discovered. Market Yahoo snapshots can stale. Score is evidence checklist, not chance of x5. No trading signal. Reconfirm current filings and catalyst before action.', 'results':res}
     (ROOT/'docs').mkdir(exist_ok=True)
-    (ROOT/'docs'/'scan.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n')
+    (ROOT/'docs'/'scan.json').write_text(json.dumps(out,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
     for r in res:
         print(f"{r['ticker']:9} {r['score']}/7 {r.get('cap_usd_m','?')}M USD  event={r.get('catalyst',{}).get('window_end')} runway={r.get('runway_est_months')}mo ret60={r.get('return_60sessions_pct')}% missing="+str([k for k,v in r.get('flags',{}).items() if not v])+(' ERROR '+r['error'] if 'error' in r else ''))
 if __name__=='__main__':main()
